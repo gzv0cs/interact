@@ -1,0 +1,25 @@
+# DynamicDB build properoties
+source_folder=C:/workspace/Interact/src/
+entity_names_xml=EntityNames.xml
+entity_build_pkg=com/navi/interact/build/entity
+wrapper_build_pkg=com/navi/interact/build/wrapper
+script_src_folder=com/n/db/factory
+
+#sql script names
+create_table_script=CreateTables.sql
+delete_table_script=DeleteTables.sql
+
+#sql script names
+beans_xml=Beans.xml
+
+# database configuration
+db.server=localhost
+db.driver=org.postgresql.Driver
+db.connection.prefix=jdbc:postgresql://
+db.port=5432
+db.name=interact
+db.user=postgres
+db.pass=postgres
+
+# logfj2 config file
+log4j2.filename=log4j2.xml

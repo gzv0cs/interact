@@ -1,0 +1,2 @@
+DROP TABLE IF EXISTS SensorData;
+DROP SEQUENCE IF EXISTS SensorData_id_seq;

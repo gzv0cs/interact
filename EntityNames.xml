@@ -1,0 +1,17 @@
+<Entities>
+    <!-- BaseEntity is mandatory structure -->
+    <BaseEntity name="Entity">
+        <property name="createdBy" type="String" length="20" notnull="true" default="SYSTEM_USER"/>
+        <property name="createdDateTime" type="Timestamp" notnull="true" default="CURRENT_TIMESTAMP"/>
+        <property name="modifiedBy" type="String" length="20"/>
+        <property name="modifiedDateTime" type="Timestamp"/>
+    </BaseEntity>
+    <Entity name="SensorData">
+        <property name="id" type="int" pkey="true" notnull="true" sequence="true" />
+        <property name="weatherStationNo" type="String"/>
+        <property name="sensorId" type="int"/>
+        <property name="sessorData" type="numeric" precision="8" scale="2"/>
+        <property name="dataUnit" type="String" length="2"/>
+        <property name="readDateTime" type="Date"/>
+    </Entity>
+</Entities>
