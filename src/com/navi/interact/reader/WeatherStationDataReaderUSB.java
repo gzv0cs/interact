@@ -1,7 +1,6 @@
 package com.navi.interact.reader;
 
 import com.navi.interact.build.wrapper.SensorDataWrapper;
-import com.navi.interact.tools.factory.InstanceFactory;
 import gnu.io.CommPortIdentifier;
 import gnu.io.SerialPort;
 import gnu.io.SerialPortEvent;
@@ -26,9 +25,9 @@ import java.util.Enumeration;
 /**
  * Created by mevan on 26/07/2016.
  */
-public class WeatherStationDataReader implements SerialPortEventListener {
+public class WeatherStationDataReaderUSB implements SerialPortEventListener {
 
-    private static final Logger LOGGER = LogManager.getLogger(WeatherStationDataReader.class);
+    private static final Logger LOGGER = LogManager.getLogger(WeatherStationDataReaderUSB.class);
 
     SerialPort serialPort;
     /** The port we're normally going to use. */
@@ -70,7 +69,6 @@ public class WeatherStationDataReader implements SerialPortEventListener {
             }
         }
         if (portId == null) {
-            System.out.println("Could not find COM port.");
             LOGGER.error("Could not find COM port.");
             return;
         }
@@ -120,7 +118,7 @@ public class WeatherStationDataReader implements SerialPortEventListener {
     }
 
     public static void main(String[] args) throws Exception {
-        WeatherStationDataReader main = new WeatherStationDataReader();
+        WeatherStationDataReaderUSB main = new WeatherStationDataReaderUSB();
         main.initialize();
         Thread t=new Thread() {
             public void run() {

@@ -13,7 +13,7 @@ import java.util.concurrent.Executors;
  */
 public class DataReaderThreadPool {
 
-    private static final Logger LOGGER = LogManager.getLogger(WeatherStationDataReader.class);
+    private static final Logger LOGGER = LogManager.getLogger(WeatherStationDataReaderUSB.class);
 
     private ExecutorService executor;
     private static String SEED = "seed";
